@@ -1,0 +1,1 @@
+This is a group project. In order for us to excel in this project, is for us to have a good communication and professional teamwork spirits. All the best!
