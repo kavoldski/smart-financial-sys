@@ -2,7 +2,7 @@
 class Transaction:
     def __init__(self, transaction_id, amount, transaction_type, date, account_id):
         self.transaction_id = transaction_id
-        self.amount = amount
+        self.amount = amountgithub
         self.transaction_type = transaction_type  # e.g., "Deposit", "Withdrawal"
         self.date = date  # Format: "YYYY-MM-DD"
         self.account_id = account_id
@@ -27,4 +27,4 @@ class Transaction:
             "transaction_type": self.transaction_type,
             "date": self.date,
             "account_id": self.account_id
-        }
+        } #still not working
