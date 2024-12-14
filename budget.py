@@ -29,6 +29,11 @@ class Budget:
             "within_budget": self.check_budget()
         }
 
+    def display_budget(self):
+        """Display the budget details."""
+        print(f"Budget ID: {self.budget_id}, Category: {self.category}, Amount: ${self.amount:.2f}, "
+              f"Spent: ${self.expenses:.2f}, Remaining: ${self.amount - self.expenses:.2f}")
+
     def __str__(self):
         """String representation of the budget."""
         return f"{self.category}: Limit = {self.amount}, Spent = {self.expenses}"
