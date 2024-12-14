@@ -8,7 +8,11 @@ class Transaction:
         self.account_id = account_id
 
     def __str__(self):
-        return f"Transaction ID: {self.transaction_id}, Type: {self.transaction_type}, Amount: {self.amount}, Date: {self.date}, Account ID: {self.account_id}"
+        return f"Transaction ID: {self.transaction_id}, Type: {self.transaction_type}, Amount: ${self.amount:.2f}, Date: {self.date}, Account ID: {self.account_id}"
+
+    def display_transaction(self):
+        """Display the transaction details."""
+        print(self)  # This will call the __str__ method
 
     def is_deposit(self):
         return self.transaction_type.lower() == "deposit"
