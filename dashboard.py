@@ -38,6 +38,51 @@ class Dashboard:
         for investment in investments:
             investment.display_investment()
 
+    def show_menu(self, accounts, transactions, budgets, investments):
+        while True:
+            print("\nMenu:")
+            print("1. View Accounts")
+            print("2. View Transactions")
+            print("3. View Budgets")
+            print("4. View Investments")
+            print("5. Exit")
+            
+            choice = input("Select an option: ")
+            
+            if choice == '1':
+                self.show_accounts(accounts)
+            elif choice == '2':
+                self.show_transactions(transactions)
+            elif choice == '3':
+                self.show_budgets(budgets)
+            elif choice == '4':
+                self.show_investments(investments)
+            elif choice == '5':
+                print("Exiting dashboard.")
+                break
+            else:
+                print("Invalid choice. Please try again.")
+
+    def show_accounts(self, accounts):
+        print("Accounts:")
+        for account in accounts:
+            print(f"Account ID: {account.account_id}, Type: {account.account_type}, Balance: ${account.balance:.2f}")
+
+    def show_transactions(self, transactions):
+        print("Recent Transactions:")
+        for transaction in transactions:
+            transaction.display_transaction()
+
+    def show_budgets(self, budgets):
+        print("Budgets:")
+        for budget in budgets:
+            budget.display_budget()
+
+    def show_investments(self, investments):
+        print("Investments:")
+        for investment in investments:
+            investment.display_investment()
+
 # Example usage
 if __name__ == "__main__":
     # Create a user
