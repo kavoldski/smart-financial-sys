@@ -1,4 +1,4 @@
-# main.py
+# Importing all the classes into main.py
 from user import User
 from account import Account
 from transaction import Transaction
